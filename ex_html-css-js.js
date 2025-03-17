@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalPedido = () => {
         let precio = Number(document.getElementById("tipo").value);
         let extras = document.querySelectorAll(".extras:checked").length;
-        if (extras<2) extras = 2;
         let cantidad = Number(document.getElementById("cantidad").value);
         let total = (precio+extras) * cantidad;
         span.textContent = `${total} €`;
