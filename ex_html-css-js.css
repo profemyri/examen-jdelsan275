@@ -1,6 +1,5 @@
 body {
    max-width: 800px;
-   align-content: center;
    background-color:#faf0dc;
    font-family: Arial, sans-serif;
    color:black;
@@ -14,7 +13,6 @@ h1 {
 }
 
 img {
-   align-content: center;
    max-width: 100%;
    border-radius: 5px;
    margin-bottom: 15px;
@@ -40,9 +38,8 @@ input[type="checkbox"] {
    margin-right: 10px;
 }
 
-input[type="text"] {
-   width: 90%;
-   margin-right: 10px;
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+   width: 97%;
 }
 
 button {
