@@ -5,6 +5,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const instrucciones = document.getElementById("instrucciones");
     const contador = document.getElementById("contador");
     
+    form.onsubmit = function(ex) {
+        const nombre = document.getElementById("nombre").value.trim();
+        const apellidos = document.getElementById("apellidos").value.trim();
+        const direccion = document.getElementById("direccion").value.trim();
+        const telefono = document.getElementById("telefono").value.trim();
+        const email = document.getElementById("email").value.trim();
+        if(nombre === "" || apellidos === "" || direccion.length < 15 || !/^\d{9,}$/.test(telefono) || !email.includes("@")) {
+            alert("Rellena los campos obligatorios");
+            ex.preventDefault();
+        } else if(confirm("¿Enviar pedido?")) {
+            alert(`Gracias por tu pedido.`);
+        } else {
+            ex.preventDefault();
+        }
+    };
+    
     const totalPedido = function() {
         let precio = Number(document.getElementById("tipo").value);
         let extras = document.querySelectorAll(".extras:checked").length;
@@ -21,21 +37,5 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll("input, select").forEach(el => {
         el.onchange = totalPedido;
     });
-
-    form.onsubmit = function(e) {
-        const nombre = document.getElementById("nombre").value.trim();
-        const apellidos = document.getElementById("apellidos").value.trim();
-        const direccion = document.getElementById("direccion").value.trim();
-        const telefono = document.getElementById("telefono").value.trim();
-        const email = document.getElementById("email").value.trim();
-        if(nombre === "" || apellidos === "" || direccion.length < 15 || !/^\d{9,}$/.test(telefono) || !email.includes("@")) {
-            alert("Rellena los campos obligatorios");
-            e.preventDefault();
-        } else if(confirm("¿Enviar pedido?")) {
-            alert(`Gracias por tu pedido.`);
-        } else {
-            e.preventDefault();
-        }
-    };
     totalPedido();
 });
