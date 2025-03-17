@@ -1,5 +1,5 @@
 body {
-   max-width: 600px;
+   max-width: 800px;
    background-color:#faf0dc;
    font-family: Arial, sans-serif;
    color:black;
@@ -10,12 +10,6 @@ h1 {
    text-align: center;
    color:#a4161a;
    margin-bottom: 20px;
-}
-
-h2 {
-   font-size: 24px;
-   color:#5f5e5e;
-   margin-bottom: 15px;
 }
 
 img {
@@ -40,6 +34,11 @@ input, select, textarea {
 }
 
 input[type="checkbox"] {
+   width: auto;
+   margin-right: 5px;
+}
+
+input[type="text"] {
    width: auto;
    margin-right: 5px;
 }

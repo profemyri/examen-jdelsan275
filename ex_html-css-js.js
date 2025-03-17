@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email").value.trim();
 
         if(nombre === "" || apellidos === "" || direccion.length < 15 || !/^\d{9,}$/.test(telefono) || !email.includes("@")) {
-            alert("Error, hay campos obligatorios");
+            alert("Rellena los campos obligatorios");
             e.preventDefault();
         } else if(confirm("¿Enviar pedido?")) {
             alert(`Gracias por tu pedido.`);
