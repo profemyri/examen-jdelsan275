@@ -6,33 +6,46 @@
     <link rel="stylesheet" href="ex_html-css-js.css">
 </head>
 <body>
-    <form class="formulario" id="Formulario_hamburguesa"></form>
+    <h1>Realiza tu pedido</h1>
     <img src="cheese-burger.png">
-        <h1>Realiza tu pedido</h1>
-        <input type="text" id="nombre">
-        <input type="text" id="apellidos">
-        <input type="text" id="direccion">
-        <input type="text" id="telefono">
-        <input type="email" id="email">
-        <h3>hora aproximada de entrega:</h3>
-        <input type="text" id="hora">
-        <h1>Tipo de Hamburguesa</h1>
-        <input type="radio" id="clasica">Clasica
-        <input type="radio" id="BBQ">BBQ
-        <input type="radio" id="especial">Especial
-        <h1>Ingredientes extra</h1>
-        <input type="checkbox" id="bacon">Bacon
-        <input type="checkbox" id="queso">Queso
-        <input type="checkbox" id="huevo">Huevo
-        <input type="checkbox" id="patatas">Patatas
-        <h3>Cantidad:</h3>
-        <input type=""
-        <h1>Método de pago</h1>
-        <input type="radio" id="efectivo">Efectivo
-        <input type="radio" id="tarjeta">Tarjeta
-        <input type="radio" id="paypal">Paypal
+    <form id="Formulario_hamburguesa">
+        <label for="nombre">Nombre*</label><input type="text" id="nombre" required>
+        <label for="apellidos">Apellidos*</label><input type="text" id="apellidos" required>
+        <label for="direccion">Dirección*</label><input type="text" id="direccion" required>
+        <label for="telefono">Teléfono*</label><input type="tel" id="telefono" required>
+        <label for="email">Email*</label><input type="email" id="email" required>
+        <label for="hora">hora aproximada de entrega:</label><input type="text" id="hora">
+        <label for="tipo">Tipo de Hamburguesa</label>
+        <select id="tipo">
+            <option value="5">Clásica (5€)</option>
+            <option value="7">BBQ (7€)</option>
+            <option value="8">Especial (8€)</option>
+        </select>
+        <p>Ingredientes extra</p>
+        <input type="checkbox" class="extras" value="1">Bacon
+        <input type="checkbox" class="extras" value="1">Queso
+        <input type="checkbox" class="extras" value="1">Huevo
+        <input type="checkbox" class="extras" value="1">Patatas
+        <label for="cantidad">Cantidad</label>
+        <select id="cantidad">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <label for="pago">Método de pago:</label>
+        <select id="pago">
+            <option>Efectivo</option>
+            <option>Tarjeta</option>
+            <option>PayPal</option>
+        </select>
+        <label for="instrucciones">Instrucciones adicionales</label><textarea id="instrucciones"></textarea>
+        <p id="contador">0/100 caracteres</p>
+        <button type="submit" id="enviar">Enviar Pedido</button>
+        <p>Total: <span id="totalpedido">0 €</span></p>
     </form>
     <script src="ex_html-css-js.js"></script>
-
 </body>
+<footer>Jesús Delgado Sánchez</footer>
 </html>

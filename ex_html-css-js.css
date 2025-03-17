@@ -1,13 +1,52 @@
 body {
-   ...........
+   max-width: 600px;
+   background-color:#faf0dc;
+   font-family: Arial, sans-serif;
+   color:black;
 }
 
 h1 {
-   ...........
+   font-size: 32px;
+   text-align: center;
+   color:#a4161a;
+   margin-bottom: 20px;
+}
+
+h2 {
+   font-size: 24px;
+   color:#5f5e5e;
+   margin-bottom: 15px;
+}
+
+img {
+   max-width: 100%;
+   border-radius: 5px;
+   margin-bottom: 15px;
 }
 
 form {
-   ...........
+   background-color: white;
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+   margin-bottom: 20px;
 }
 
-............
+input, select, textarea {
+   border: 1px solid #eaeaea;
+   border-radius: 5px;
+   padding: 8px;
+   margin-bottom: 15px;
+}
+
+input[type="checkbox"] {
+   width: auto;
+   margin-right: 5px;
+}
+
+button {
+   background-color: #a4161a;
+   color: white;
+   border-radius: 5px;
+   padding: 10px;
+}
