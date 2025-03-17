@@ -13,8 +13,8 @@
         <label for="apellidos">Apellidos*</label><input type="text" id="apellidos" required>
         <label for="direccion">Dirección*</label><input type="text" id="direccion" required>
         <label for="telefono">Teléfono*</label><input type="tel" id="telefono" required>
-        <label for="email">Email*</label><input type="email" id="email" required><br>
-        <label for="hora">hora aproximada de entrega:</label><input type="text" id="hora"><br>
+        <label for="email">Email*</label><input type="email" id="email" required>
+        <label for="hora">hora aproximada de entrega:</label><input type="text" id="hora">
         <label for="tipo">Tipo de Hamburguesa</label>
         <select id="tipo">
             <option value="5">Clásica (5€)</option>
@@ -34,13 +34,13 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <br></be><label for="pago">Método de pago:</label>
+        <br><label for="pago">Método de pago:</label>
         <select id="pago" required>
             <option>Efectivo</option>
             <option>Tarjeta</option>
             <option>PayPal</option>
         </select>
-        <br><label for="instrucciones">Instrucciones adicionales</label><br><textarea id="instrucciones"></textarea>
+        <br><label for="instrucciones">Instrucciones adicionales</label><textarea id="instrucciones"></textarea>
         <p id="contador">0/100 caracteres</p>
         <button type="submit" id="enviar">Enviar Pedido</button>
         <p>Total: <span id="totalpedido">0 €</span></p>

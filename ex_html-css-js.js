@@ -5,10 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const instrucciones = document.getElementById("instrucciones");
     const contador = document.getElementById("contador");
 
-    instrucciones.oninput = () => {
-        contador.textContent = `${instrucciones.value.length}/100 caracteres`;
-    };
-
     const totalPedido = () => {
         let precio = Number(document.getElementById("tipo").value);
         let extras = document.querySelectorAll(".extras:checked").length;
@@ -16,6 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
         let total = (precio+extras) * cantidad;
         span.textContent = `${total} €`;
         return total;
+    };
+
+    instrucciones.oninput = () => {
+        contador.textContent = `${instrucciones.value.length}/100 caracteres`;
     };
 
     document.querySelectorAll("input, select").forEach(el => {
