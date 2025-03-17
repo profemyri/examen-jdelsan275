@@ -1,6 +1,6 @@
 body {
    max-width: 800px;
-   align-items: center;
+   align-content: center;
    background-color:#faf0dc;
    font-family: Arial, sans-serif;
    color:black;
@@ -14,7 +14,7 @@ h1 {
 }
 
 img {
-   align-items: center;
+   align-content: center;
    max-width: 100%;
    border-radius: 5px;
    margin-bottom: 15px;
@@ -41,7 +41,7 @@ input[type="checkbox"] {
 }
 
 input[type="text"] {
-   width: 100%;
+   width: 90%;
    margin-right: 10px;
 }
 
