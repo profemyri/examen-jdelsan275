@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const span = document.getElementById("totalpedido");
     const instrucciones = document.getElementById("instrucciones");
     const contador = document.getElementById("contador");
-
+    
     const totalPedido = function() {
         let precio = Number(document.getElementById("tipo").value);
         let extras = document.querySelectorAll(".extras:checked").length;
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const direccion = document.getElementById("direccion").value.trim();
         const telefono = document.getElementById("telefono").value.trim();
         const email = document.getElementById("email").value.trim();
-
         if(nombre === "" || apellidos === "" || direccion.length < 15 || !/^\d{9,}$/.test(telefono) || !email.includes("@")) {
             alert("Rellena los campos obligatorios");
             e.preventDefault();
