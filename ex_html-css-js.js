@@ -1,11 +1,11 @@
 //Escribe aquí tu código JavaScript
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("Formulario_hamburguesa");
     const span = document.getElementById("totalpedido");
     const instrucciones = document.getElementById("instrucciones");
     const contador = document.getElementById("contador");
 
-    const totalPedido = () => {
+    const totalPedido = function() {
         let precio = Number(document.getElementById("tipo").value);
         let extras = document.querySelectorAll(".extras:checked").length;
         let cantidad = Number(document.getElementById("cantidad").value);
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return total;
     };
 
-    instrucciones.oninput = () => {
+    instrucciones.oninput = function() {
         contador.textContent = `${instrucciones.value.length}/100 caracteres`;
     };
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         el.onchange = totalPedido;
     });
 
-    form.onsubmit = (e) => {
+    form.onsubmit = function(e) {
         const nombre = document.getElementById("nombre").value.trim();
         const apellidos = document.getElementById("apellidos").value.trim();
         const direccion = document.getElementById("direccion").value.trim();
